@@ -1,0 +1,42 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.festi{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+    margin: 3rem 3rem 2rem 3rem;
+
+    @include m.desktop{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.festi__imagen{
+    width: 100%;
+    height: 100%;
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.festi__texto{
+    h2{
+        font-size: 4rem;
+        font-weight: 1000;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    h3{
+        color: v.$verde;
+    }
+
+    p{
+        font-size: 1.7rem;
+        line-height: 1.5;
+    }
+}
+
+

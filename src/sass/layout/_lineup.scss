@@ -1,0 +1,86 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.line-up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: v.$rosa;
+
+    h3{
+        margin-top: 6rem;
+        font-size: 5rem;
+        color: v.$blanco;
+        margin-bottom: 2rem;
+    }
+
+    .dia{
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        font-weight: 700;
+        color: white;
+    }
+}
+
+.listas{
+
+    width: 75%;
+    @include m.grid(1, 3rem);
+    @include m.tablet{
+        @include m.grid(2, 3rem);
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+        width: 90%
+    }
+
+    @include m.desktop{
+        width: 75%;
+    }
+    
+    ul{
+        @include m.list-reset;
+
+
+        li{
+            padding: 1rem;
+            font-weight: 700;
+
+            span{
+                font-weight: 400;
+            }
+        }
+    }
+
+    p{
+        text-align: center;
+        font-size: 3rem;
+        margin: 1.5rem;
+        font-weight: 700;
+        padding: 2rem;
+    }
+
+    .bg-amarillo,
+    .bg-verde{
+        li{
+            padding: 2.5rem;
+        }
+    }
+
+    .bg-amarillo{
+        
+        li:nth-child(odd){
+            background-color: lighten(v.$amarillo, 10);
+        }
+
+        background-color: v.$amarillo;
+    }
+
+    .bg-verde{
+        li:nth-child(odd){
+            background-color: lighten(v.$verde, 10);
+        }
+        background-color: v.$verde;
+    }
+
+    
+}
